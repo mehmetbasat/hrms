@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<EasyWSDL>
+  <Info>
+    <Version>9.0.0.0</Version>
+    <AccountType>Basic</AccountType>
+    <LibrariesFolder>easywsdl</LibrariesFolder>
+    <MainClass>NCEKPSPublicSoap</MainClass>
+  </Info>
+  <Settings>
+    <Url>https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx</Url>
+    <ClassPrefix/>
+    <PackageName>project.hrms.core.MernisServiceReference</PackageName>
+    <AddDocumentation>false</AddDocumentation>
+    <EnableAdvancedFeatures>true</EnableAdvancedFeatures>
+    <EnableMTOM>false</EnableMTOM>
+    <EncodeIllegalCharacters>true</EncodeIllegalCharacters>
+    <GenerateAsyncOperations>true</GenerateAsyncOperations>
+    <ImplementSerializable>false</ImplementSerializable>
+    <ImplementParcelable>false</ImplementParcelable>
+    <AddAnyCollection>false</AddAnyCollection>
+    <DateTimeSupport>Default</DateTimeSupport>
+    <Repackage/>
+    <GenerateHtmlDocumentation>false</GenerateHtmlDocumentation>
+    <AddDataSetSupport>false</AddDataSetSupport>
+    <PlatformType>JavaAndroidV2</PlatformType>
+    <Annotations>None</Annotations>
+    <AddLibraries>true</AddLibraries>
+    <GenerateGetSetMethods>false</GenerateGetSetMethods>
+    <DetectDictionaries>false</DetectDictionaries>
+  </Settings>
+  <Files>
+    <File>NCEBinaryObject.java</File>
+    <File>NCEConnectionProvider.java</File>
+    <File>NCEDateTimeParser.java</File>
+    <File>NCEHelper.java</File>
+    <File>NCEKPSPublicSoap.java</File>
+    <File>NCEKPSPublicSoap12.java</File>
+    <File>NCERequestResultHandler.java</File>
+    <File>NCEResponseData.java</File>
+    <File>NCESoapException.java</File>
+    <File>NCEStandardDateTimeParser.java</File>
+  </Files>
+  <Libraries/>
+</EasyWSDL>
