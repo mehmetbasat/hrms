@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "job_titles")
@@ -20,5 +22,8 @@ public class Job {
 
     @Column(name = "job_title")
     String name;
+
+    @OneToMany(mappedBy = "job")
+    private List<JobAdvertisement> jobAdvertisements;
 
 }
