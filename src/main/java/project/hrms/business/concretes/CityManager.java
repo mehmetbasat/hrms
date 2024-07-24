@@ -28,6 +28,7 @@ public class CityManager implements CityService {
         return new SuccessResult("City added successfully");
     }
 
+
     @Override
     public DataResult<List<City>> gelAll() {
         return new SuccessDataResult<>(cityDao.findAll());
