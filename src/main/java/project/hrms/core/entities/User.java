@@ -1,4 +1,4 @@
-package project.hrms.entities.concretes;
+package project.hrms.core.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

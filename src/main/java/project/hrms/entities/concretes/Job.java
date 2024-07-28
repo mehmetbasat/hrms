@@ -1,5 +1,6 @@
 package project.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +24,7 @@ public class Job {
     @Column(name = "job_title")
     String name;
 
-    @OneToMany(mappedBy = "job")
-    private List<JobAdvertisement> jobAdvertisements;
+    //@OneToMany(mappedBy = "job")
+    //private List<JobAdvertisement> jobAdvertisements;
 
 }

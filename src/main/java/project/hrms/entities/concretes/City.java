@@ -1,5 +1,6 @@
 package project.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "cities")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","products"})
+
 public class City {
 
     @Id

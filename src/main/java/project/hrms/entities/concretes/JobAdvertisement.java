@@ -13,7 +13,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "job_advertisements")
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","products"})
 public class JobAdvertisement {
 
     @Id

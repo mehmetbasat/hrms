@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import project.hrms.core.entities.User;
 
 import java.util.List;
 
@@ -15,25 +16,22 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@PrimaryKeyJoinColumn(name = "id")
 @Table(name = "employers" )
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","products"})
-@EqualsAndHashCode(callSuper=true)
+
 public class Employer extends User {
 
     @NotNull(message = "Company name cannot be null.")
     @Column(name = "company_name")
-    String companyName;
+    private String companyName;
 
     @NotNull(message = "Website cannot be null.")
     @Column(name = "website")
-    String webSite;
+    private String webSite;
 
     @NotNull(message = "Phone number cannot be null.")
     @Column(name = "phone_number")
-    String phoneNumber;
+    private String phoneNumber;
 
-    @OneToMany(mappedBy = "employer")
-    List<JobAdvertisement> jobAdvertisements;
+
 
 }
