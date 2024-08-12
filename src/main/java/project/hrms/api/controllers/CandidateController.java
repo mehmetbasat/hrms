@@ -11,6 +11,7 @@ import project.hrms.core.utilities.results.DataResult;
 import project.hrms.core.utilities.results.ErrorDataResult;
 import project.hrms.core.utilities.results.Result;
 import project.hrms.entities.concretes.Candidate;
+import project.hrms.entities.dtos.CandidateDto;
 
 import java.util.HashMap;
 import java.util.List;
@@ -49,6 +50,11 @@ public class CandidateController {
         ErrorDataResult<Object> errors
                 = new ErrorDataResult<Object>(validationErrors,"Doğrulama hataları");
         return errors;
+    }
+
+    @GetMapping("/getCandidateCvById")
+    public DataResult<CandidateDto> getCandidateCvById(int id) {
+        return candidateService.getCandidateCvById(id);
     }
 
 

@@ -7,6 +7,7 @@ import project.hrms.business.abstracts.CandidateService;
 import project.hrms.core.utilities.results.*;
 import project.hrms.dataAccess.abstracts.CandidateDao;
 import project.hrms.entities.concretes.Candidate;
+import project.hrms.entities.dtos.CandidateDto;
 
 import java.util.List;
 
@@ -47,4 +48,11 @@ public class CandidateManager implements CandidateService {
     public DataResult<List<Candidate>> getAll() {
         return new SuccessDataResult<>(this.candidateDao.findAll());
     }
+
+    @Override
+    public DataResult<CandidateDto> getCandidateCvById(int id) {
+        return new SuccessDataResult<>(this.candidateDao.getCandidateCvById(id));
+    }
+
+
 }

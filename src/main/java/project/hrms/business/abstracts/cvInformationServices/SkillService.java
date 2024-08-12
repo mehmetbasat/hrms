@@ -1,0 +1,8 @@
+package project.hrms.business.abstracts.cvInformationServices;
+
+import project.hrms.core.utilities.results.Result;
+import project.hrms.entities.concretes.cvInformations.Skill;
+
+public interface SkillService {
+    Result add(Skill skill);
+}

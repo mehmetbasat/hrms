@@ -1,34 +1,62 @@
 package project.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import project.hrms.core.entities.User;
+import project.hrms.entities.concretes.cvInformations.*;
+
+import java.util.List;
 
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Table(name = "candidates")
-@PrimaryKeyJoinColumn(name = "id")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","educations","experiences","addresses","coverLetter","languages","images","skills"})
+
 public class Candidate extends User {
 
     @NotNull(message = "Name cannot be null.")
     @Column(name = "first_name")
-    String firstName;
+    private String firstName;
 
     @NotNull(message = "Surname cannot be null.")
     @Column(name = "last_name")
-    String lastName;
+    private String lastName;
 
     @NotNull(message = "Nationality id cannot be null.")
     @Column(name = "nationality_id")
-    String nationalityId;
+    private String nationalityId;
 
     @NotNull(message = "Birth year cannot be null.")
     @Column(name = "birth_year")
-    String birthYear;
+    private String birthYear;
+
+    @OneToMany(mappedBy = "candidate")
+    private List<Education> educations;
+
+    @OneToMany(mappedBy = "candidate")
+    private List<Experience> experiences;
+
+    @OneToOne(mappedBy = "candidate")
+    private CoverLetter coverLetter;
+
+    @OneToMany(mappedBy = "candidate")
+    private List<ForeignLanguage> languages;
+
+    @OneToMany(mappedBy = "candidate")
+    private List<Image> images;
+
+    @OneToMany(mappedBy = "candidate")
+    private List<Skill> skills;
+
+    @OneToOne(mappedBy = "candidate")
+    private Address addresses;
+
+
+
 
 }
